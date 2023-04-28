@@ -1,0 +1,81 @@
+<!-- 📚 User Stories
+As a user, I see a Header component with the name of your cohort.
+As a user, I can see a Content component that contains an unordered list of all your classmates.
+As a user, I can see a Footer component with your name. -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Intro to React</title>
+  </head>
+  <body>
+    <div id="react-container"></div>
+    
+    <script type="text/babel">
+      const App = () => {
+        return (
+        <>
+          <h1>Go Team Charlie!</h1>
+          <Content />
+        </>
+        )
+      }
+
+      const Content = () => {
+        return <ul>
+          <a href="https://www.linkedin.com/in/vancea/" target="_blank">Vance Apostol</a>
+          <br />
+          <a href="https://www.linkedin.com/in/wabowen89/" target="_blank">William Bowen</a>
+          <br />
+          <a href="https://www.linkedin.com/in/aubrey-diehl/" target="_blank">Aubrey Diehl</a>
+          <br />
+          <a href="https://www.linkedin.com/in/beatricelvira/" target="_blank">Beatrice Elvira</a>
+          <br />
+          <a href="https://www.linkedin.com/in/egonz0216/" target="_blank">Ernesto Gonzalez</a>
+          <br />
+         <a href="https://www.linkedin.com/in/justinkarpman/" target="_blank">Justin Karpman</a>
+          <br />
+          <a href="https://www.linkedin.com/in/hslambert/" target="_blank">Henrique Lambertucci</a>
+          <br />
+          <a href="https://www.linkedin.com/in/lanyuke/" target="_blank">Yue Han Lee</a>
+          <br />
+          <a href="https://www.linkedin.com/in/lohke96/" target="_blank">Kyle Lohman</a>
+          <br />
+          <a href="https://www.linkedin.com/in/tuckermacintyre/" target="_blank">Tucker MacIntyre</a>
+          <br />
+          <a href="https://www.linkedin.com/in/rashaan-richardson/" target="_blank">Rashaan Richardson</a>
+          <br />
+          <a href="https://www.linkedin.com/in/jricks86/" target="_blank">Jessica Ricks</a>
+          <br />
+          <a href="https://www.linkedin.com/in/surielis-rodriguez/" target="_blank">Surielis Rodriguez Robles</a>
+          <br />
+          <a href="https://www.linkedin.com/in/catalinorodriguez/" target="_blank">Catalino Rodriguez</a>
+          <br />
+          <a href="https://www.linkedin.com/in/halie-romasco/" target="_blank">Halie Romasco</a>
+          <br />
+          <a href="https://www.linkedin.com/in/romoramgel/" target="_blank">Ramgel Romo</a>
+          <br />
+          <a href="https://www.linkedin.com/in/scott-tuschl/" target="_blank">Scott Tuschl</a>
+          </ul>
+      }
+      const domContainer = document.querySelector("#react-container")
+      const root = ReactDOM.createRoot(domContainer)
+      root.render(<App />)
+      
+    </script>
+    <footer>
+      &copy Cherry | LEARN Team Charlie | 2023<br>
+      <a href="https://www.linkedin.com/in/sarah-m-cherry/" target="_blank"> Cherry's LinkedIn </a><br>
+    </footer>
+  </body>
+</html>
