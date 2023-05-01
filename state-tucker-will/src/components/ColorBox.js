@@ -1,15 +1,21 @@
 import React, {useState} from 'react'
 
 const ColorBox = () => {
+
     const [color, setColor] = useState("white")
 
+    const [text, setText] = useState("white")
+
+    const colors = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+
     const changeColor = () => {
-        setColor("red")
+        setColor(colors[Math.floor(Math.random() * colors.length)]) 
+        setText(colors[Math.floor(Math.random() * colors.length)])
     }
+
     return(<>
-        {/* <p style = {{borderColor:"black", backgroundColor:"red"}}>This is my box</p> */}
        
-        <button onClick ={changeColor} style = {{backgroundColor: color, borderColor: "black",width:"100px", height:"100px"}}>White</button>
+        <button onClick ={changeColor} style = {{backgroundColor: color, borderColor: "black", width:"100px", height:"100px"}}>{text}</button>
         </>)
 }
 
