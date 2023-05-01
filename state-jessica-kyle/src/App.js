@@ -1,17 +1,12 @@
-import { useState } from "react";
+import Box from "./components/Box"
+import "./App.css"
+const App = () => {
 
-
-const App() {
-const color = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
-  const [color, setColor] = useState("color")
-const changeColor = () => {
-  setColor(color.random())
-}
   return (
-    <h1>White</h1>
-    <button onClick = {changeColor}>Change Color</button>
-    
+    <>
+    <Box/>
+    </>
   );
-}
+};
 
 export default App;
