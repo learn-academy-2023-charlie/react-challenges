@@ -12,7 +12,10 @@ const Box = () => {
   return (
     <>
       <h1>Color Box</h1>
-      <div className="box"></div>
+      <div className="box">
+        <p>
+          White</p>
+      </div>
       <p><button type="button">Color-name</button></p>
       
 
