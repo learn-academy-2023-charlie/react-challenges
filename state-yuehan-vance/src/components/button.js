@@ -1,16 +1,20 @@
+import React, {useState} from 'react'
 
-
-
-const button = () => {
+const Button = () => {
+    const [color, setColor] = useState("white")
+    const allColor = ["red", "orange", "yellow", "green", "blue", "purple", "pink"]
+    
+   
+    const pickColor =() => {
+        const randomColorNum = Math.floor(Math.random() * allColor.length)
+        const randomColor = allColor[randomColorNum]
+        setColor(randomColor)
+    }
   return (
     <>
-      <h1>  
-       <p>
-        <button>"CLick me!"</button>
-        </p> 
-        </h1>
+        <button onClick={() => pickColor()} style={{ height: 250 , width: 250 , backgroundColor: color, color: "black" }}>{color}</button>
     </>
   )
 }
 
-export default button
+export default Button
