@@ -1,14 +1,18 @@
 import React, {useState} from 'react'
 
 const Addbox = () => {
-  const [string, setString] =useState("")
+  const [string, setString] =useState(" ")
   const addingBox = () => {
     setString(string + "□")
   }
-
+  const rmingBox = () => {
+    setString(string.slice(0, -1))
+  }
   return (
     <>
        <p>{string}</p>
+       <button onClick={addingBox} >Add a box</button>
+       <button onClick={rmingBox} >Remove a box</button>
     </>
   )
 }
@@ -30,4 +34,4 @@ const Addbox = () => {
 // )
 // }
 
-export default addbox
+export default Addbox

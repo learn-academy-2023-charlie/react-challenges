@@ -1,6 +1,6 @@
 import React from "react"
-import Button from './components/button'
-import addbox from './components/addbox'
+// import Button from './components/button'
+import Addbox from './components/addbox'
 import './App.css'
 
 // const App = () => {
@@ -21,7 +21,7 @@ const App = () => {
   return (
     <>
     <h1 style={{ textAlign: 'center' }}>Adding box!</h1>
-    <button onClick={addingBox} >Add a box</button>
+    <Addbox/>
     </>
   )
 }
