@@ -1,7 +1,7 @@
 // imports
 import React, {useState} from "react"
 import Dice from './components/Dice'
-
+import RollLog from "./components/RollLog"
 
 function App() {
   
@@ -26,6 +26,7 @@ function App() {
    diceRoll = {diceRoll}
    dice = {dice}
    />
+   <RollLog />
   </>)
 }
 
