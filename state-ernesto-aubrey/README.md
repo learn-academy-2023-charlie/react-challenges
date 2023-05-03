@@ -1,0 +1,2 @@
+PseudoCode:
+Create a square box with a black border and a white background with the default color name "white" inside the box. When clicking the name of the color, the name of a different color appears. When clicking the inside of the box, the color of the box changes to match the name displayed.
