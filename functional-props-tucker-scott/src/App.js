@@ -8,10 +8,10 @@ const [foodItems, setfoodItems] = useState ([
     {name : "hamburgers", price : 4}, 
     {name : "ChickenSandwhich", price : 4}])
   
-const [orderedItem, setOrderedItem] = useState ([]) 
+const [orderedItems, setOrderedItems] = useState ([]) 
 
-const orderedItems = (item) => {
-setOrderedItem ([...orderedItem, item])
+const orderedItemClick = (item) => {
+setOrderedItems ([...orderedItems, item])
 }
   
   return(
@@ -20,13 +20,16 @@ setOrderedItem ([...orderedItem, item])
       <h2>The Menu</h2>
       {foodItems.map((item, index) => {
         return(<>
-          <Munchies item={item} key={index} />
-          <OrderedItems item={item} key={index}/>
+          <Munchies item={item} key={index} 
+          orderedItemClick = {orderedItemClick}/>
+        
           </>
 
         )
+        
+
       })}
-     
+     <orderedItems items={orderedItems} />
     </>
   )
 }

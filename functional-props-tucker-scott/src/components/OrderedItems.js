@@ -4,11 +4,17 @@ const OrderedItems = (props) => {
     return(
         <>
         <h2>This is your order</h2>
-            <p>{item.map((item, index) => {
-            {props.item.name} {props.item.price}
-            })}</p>
+            
+            <ul>
+                {props.items.map((item,index) => (
+                <li key={index}>
+                    {props.foodItems.name} - {props.item.price}
+                </li>
+                ))}
+            </ul>
+            
         </>
-        )
+    )
 }
 
 export default OrderedItems
