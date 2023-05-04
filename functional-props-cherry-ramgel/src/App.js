@@ -4,16 +4,16 @@ import Menu from "./components/Menu"
 
 const App = () => {
   const [foods, setFoods] = useState([
-    { name: "raw chicken", price: 0.50, ordered: false }, 
-    { name: "expired uncrustable", price: 100, ordered: false },
-    { name: "moldy string cheese", price: 1000, ordered: false },
-    { name: "dry pasta (cronch)", price: 1, ordered: false },
-    { name: "dirt-encrusted whole roasted pig", price: 5, ordered: false }
+    { name: "raw chicken", price: 0.50, count: 0 }, 
+    { name: "expired uncrustable", price: 100, count: 0 },
+    { name: "moldy string cheese", price: 1000, count: 0 },
+    { name: "dry pasta (cronch)", price: 1, count: 0 },
+    { name: "dirt-encrusted whole roasted pig", price: 5, count: 0 }
   ])
 
   const orderItem = (selectedItem) => {
     console.log(selectedItem);
-    foods[selectedItem].ordered = true
+    foods[selectedItem].count = foods[selectedItem].count += 1
     setFoods([...foods])
   }
   
