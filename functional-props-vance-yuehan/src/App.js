@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import Menu from "./components/Menu"
-import Order from "./components/Order"
+
+let totalPrice = 0
+const totalTax = 1.1
 
 const App = () => {
 const [menu, setMenu] = useState([
@@ -15,28 +17,35 @@ const [menu, setMenu] = useState([
 ])
 
 const orderFood = (selectedFood) => {
-  menu[selectedFood].quantity = selectedFood.quantity + 1
-  console.log(menu[selectedFood])
-  setMenu([...menu])
+  console.log(selectedFood) // --> logs the id of the movie clicked
+  console.log(menu[selectedFood]) // --> logs the clicked movie object
+  console.log(menu[selectedFood].quantity + 1) // --> logs the clicked movie watched value
+  menu[selectedFood].quantity += 1 // updates the watched value to true
+  totalPrice += menu[selectedFood].price
+  setMenu([...menu]) // sets the state to reflect the new changes
 }
 
   return (
     <>
-     <h1>Your Order</h1>
-    {menu.map((foodItem, index) => {
-      return (
-        <>
-        <Menu
-        foodItem={foodItem} 
-        key={index}
-        orderFood={orderFood} />
-       
-        <Order foodItem={foodItem} key={index} />
+     <h1>V & Y Taiwanese and Filipino Cuisine</h1>
+      {menu.map((foodItem, index) => {
+        return (
+          <>
+          <Menu
+          foodItem={foodItem} 
+          key={index}
+          orderFood={orderFood} 
+          index={index}
+          setMenu={setMenu}
+          />
         
-        </>
-      )
-    })}
-    
+          
+          
+          </>
+        )
+        })}
+      <h3>Your order total with tax: $ {(totalPrice * totalTax).toFixed(2) }
+      </h3>
     
     </>
   )

@@ -5,13 +5,12 @@ const Menu = (props) => {
         <>
             <p>
                 {props.foodItem.name}
-                  <br/>
-              Price   ${props.foodItem.price} <br/>
+                <br/>
+                Price   ${props.foodItem.price} <br/>
                 x {props.foodItem.quantity}
             </p>
-
-
-           <button onClick={props.orderFood}> Order Meeee! </button>
+            <button onClick={() =>
+            props.orderFood(props.index)}> Order Meeee! </button>
         </>
     )
 }
