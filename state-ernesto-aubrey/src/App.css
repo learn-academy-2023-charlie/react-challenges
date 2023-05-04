@@ -1,0 +1,12 @@
+.button{
+  color: pink;
+}
+.box{
+  border: solid 3px black;
+  border-radius: 25px;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  align-items: center;
+  padding: 100px 100px 100px 100px;
+}
