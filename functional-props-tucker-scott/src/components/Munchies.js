@@ -1,13 +1,11 @@
 import React from "react"
 
-const Munchies = () => {
+const Munchies = (props) => {
     return( 
     <>
-    <p>Food Name: {props.item.name}</p>
-    {props.item.price &&<p>Ordered it!</p>}
-    <button>Order Some Food</button>
+        <p>{props.item.name} {props.item.price}</p>
     </>
-    )
+   )
 }
 
 
