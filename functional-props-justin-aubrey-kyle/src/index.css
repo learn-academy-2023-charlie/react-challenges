@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.click {
+  background-color: rgb(247, 247, 204);
+  color: rgb(98, 64, 5);
+}
+.top{
+  text-align: center;
+  font-style: oblique;
+  font-weight: bolder;
+  color: rgb(224, 6, 129);
+  font-size: x-large;
+  text-shadow: 10px 10px 2px pink;
+
+}
+.order {
+  text-align: center;
+  color: rgb(224, 6, 129);
+  text-shadow: 10px 10px 2px pink;
+  font-family: bubblegum sans;
+
+}
+.p {
+  color: blueviolet;
+  text-align: center;
+  text-shadow: 10px 10px 2px pink;
+}
+.tag {
+  text-align: center;
+}
+.qty{
+  text-align: center;
+}

@@ -3,11 +3,13 @@
 const MenuItems = (props) => {
     return (
         <>
-       <p> {props.item.name}
+       <p className = "p"> {props.item.name}
         </p>
         {props.item.ordered && 
-        <p>{(props.item.quantity)}</p> }
-         <button onClick = {() => props.orderItems(props.index)}>Quantity</button>
+        <p className="qty">{(props.item.quantity)}</p> }
+        <div className = "tag">
+         <button className = "click" onClick = {() => props.orderItems(props.index)}>Quantity</button>
+         </div>
         </>
     )
 }

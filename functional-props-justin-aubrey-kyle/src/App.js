@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import MenuItems from "./components/MenuItems"
 
+
 const App = () => {
   const [menu, setMenu] = useState([
     {name: "Bananas $1.58/item", ordered: false, quantity: 0, price: 1.58},
@@ -29,14 +30,16 @@ const App = () => {
 
   return (
     <div>
-      <header>Food Ordering App</header>
-      <h1>
-        Order List
+      <header className = "top">Food Ordering App</header>
+      <h1 className = "order">
+        MENU ITEMS
       </h1>
+     
       {menu.map((item,index)=> {
         return (
           <MenuItems item={item} key={index} orderItems={orderItems} index={index} price={getTotalPrice}/>
         )
+       
         })}
       <p>Total Price: ${getTotalPrice()}</p>
       <p>Total Price with Tax: ${((getTotalPrice() + totalTax).toFixed(2))}</p>
