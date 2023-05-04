@@ -15,6 +15,7 @@ code {
 .click {
   background-color: rgb(247, 247, 204);
   color: rgb(98, 64, 5);
+  box-shadow: 3px 3px 5px rgb(98, 56, 56) ;
 }
 .top{
   text-align: center;
@@ -42,4 +43,14 @@ code {
 }
 .qty{
   text-align: center;
+  text-shadow: 5px 5px 3px black;
+}
+.total{
+text-align: center;
+font-weight:lighter;
+color: black;
+}
+.tax{
+text-align: center;
+font-weight: bold;
 }

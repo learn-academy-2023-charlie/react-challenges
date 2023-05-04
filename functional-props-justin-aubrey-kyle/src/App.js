@@ -41,8 +41,8 @@ const App = () => {
         )
        
         })}
-      <p>Total Price: ${getTotalPrice()}</p>
-      <p>Total Price with Tax: ${((getTotalPrice() + totalTax).toFixed(2))}</p>
+      <p className ="total">Total Price: ${getTotalPrice()}</p>
+      <p className="tax">Total Price with Tax: ${((getTotalPrice() + totalTax).toFixed(2))}</p>
     </div>
   );
 }
