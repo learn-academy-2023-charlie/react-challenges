@@ -4,8 +4,9 @@ The menu UI will be in its own component as will the order UI. App.js controls o
 
 📚 User Stories
 As a user, I can see an application that has a list of food items and the price of each item.
-Hint: Take some time to think about the data structure that will allow you to effectively store the required information.
+Hint: Take some time to think about the data structure that will allow you to effectively store the required information. **DONE**
 
 As a user, I can click a button to select an item I wish to order.
+**DONE**
 
 As a user, I can see the items I have selected to order displayed on the page.
