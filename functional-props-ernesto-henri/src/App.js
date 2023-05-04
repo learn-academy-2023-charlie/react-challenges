@@ -4,28 +4,34 @@ import MenUI from "./components/MenUI"
 
 const App = () => {
   const[menu, setMenu] = useState([
-    {name: "Carne Asada", price: 8, ordered: false},
-    {name: "Adobada", price: 9, ordered: false},
-    {name: "Pizza", price: 17, ordered: false}, 
-    {name: "French Fries", price: 6, ordered: false}
+    {name: "Carne Asada - ", price: 8, ordered: 0},
+    {name: "Adobada - ", price: 9, ordered: 0},
+    {name: "Pizza - ", price: 17, ordered: 0}, 
+    {name: "French Fries - ", price: 6, ordered: 0}
   ])
+  
 
-  const orderItem = (selectedItem) => {
-    console.log(selectedItem);
-    menu[selectedItem].ordered = true
-    setMenu([...menu])
+  const orderItem = (newItem, index) => {
+    const newMenuItem = [...menu];
+    newMenuItem[index] = newItem;
+    setMenu(newMenuItem)
   }
+
+
+
+
 
   return(
     <>
-      <h1>Ernesto and Henri's</h1>
-      <h3>The Menu</h3>
+      <h1 style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>Ernesto and Henri's</h1>
+      <h3 style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>The Menu</h3>
       {menu.map((item, index) => {
         return (
-          <MenUI item={item} key={index} orderItem={orderItem} index={index} />
+          <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
+          < MenUI item={item} key={index} orderItem={orderItem} index={index} />
+          </div>
         )
       })}
-      <MenUI/>
     
     
     
