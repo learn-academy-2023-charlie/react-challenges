@@ -10,14 +10,16 @@ const App = () => {
   const [userInput, setUserInput] = useState("")
 
   const handleChange = (event) => {
-    setUserInput(event.targetvalue)
+    setUserInput(event.target.value)
   }
   
   return (
     <>
       <h1>Robot Active Listening</h1>
       <input type = "text" onChange = {handleChange} />
-      {/* <GoodRobot userInput={userInput} /> */}
+      <GoodRobot userInput={userInput} />
+      <BadRobot />
+      <KanyeRobot />
     </>
   )
 
