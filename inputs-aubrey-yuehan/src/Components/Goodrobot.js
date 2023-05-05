@@ -1,11 +1,12 @@
 import React from "react";
 
 const GoodRobot = ({userInput}) => {
+
     return (
         <>
-        <h3>Good Robot</h3>
+        <h3>I am Good Robot and you are saying: </h3>
         <p>
-            {userInput}
+         {userInput}
         </p>
         </>
     )

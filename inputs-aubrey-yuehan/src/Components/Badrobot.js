@@ -1,13 +1,13 @@
 import React from "react";
 
 const BadRobot = ({userInput}) => {
-    //const newArray = input.split("")
-    const badInput = {userInput}.split("").map((value)=>"BLA")
+    const badArray = userInput.split("")
+    const blaEX = badArray.map((value) => "BLA")
     return (
         <>
-        <h3>Bad Robot</h3>
+        <h3>I am Bad Robot and you are saying </h3>
         <p>
-            {userInput}
+           {blaEX} ?
         </p>
         </>
     )
@@ -16,11 +16,6 @@ const BadRobot = ({userInput}) => {
 
 
 
+
 export default BadRobot
 
-
-//PseudoCode:
-//input: {user input}
-//output:BLAHBLAH for every character as it's typed
-//process: using .map for the userinput array/object, return a different capilized letter for each index 
-//.map
