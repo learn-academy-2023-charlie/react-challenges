@@ -18,8 +18,8 @@ const App = () => {
       <h1>Robot Active Listening</h1>
       <input type = "text" onChange = {handleChange} />
       <GoodRobot userInput={userInput} />
-      <BadRobot />
-      <KanyeRobot />
+      <BadRobot userInput={userInput} />
+      <KanyeRobot userInput={userInput} />
     </>
   )
 
